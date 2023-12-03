@@ -45,7 +45,7 @@ int main(){
 		for(int i = line.length() - 1; i >= 0 ; i-- ){
 			if (58 > int(line[i])){
 				b = int(line[i]) - 48;
-				for(int j = line.length() - 1; j > i; j--){
+				for(int j = line.length() - 3; j > i; j--){
 					for (int k = 0; k < 10; k++){
 						int f = line.find(nums[k],j);
 						if (f < 0){
@@ -57,9 +57,7 @@ int main(){
 							break;
 						}
 					}
-					
 				}
-				
 				break;
 			}
 		}
@@ -67,12 +65,12 @@ int main(){
 			cout << "error\n";
 			return 2;
 		}
-		cout << line << " -- value: " <<  a << b << endl;
+//		cout << line << " -- value: " <<  a << b << endl;
 		sum += ((10 * a) + b);
 //		cout << "Sum: " << sum << endl;
 	}
 	infile.close();
 		
-	cout << "\n\nFinal Sum: " << sum << endl;
+	cout << "\nFinal Sum: " << sum << endl;
 	return 0;
 }
